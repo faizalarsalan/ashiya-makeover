@@ -44,22 +44,22 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-7 text-sm font-medium text-[#5c3d48]">
-            <a href="#wedding-offer" className="hover:text-[#c94a6a] transition-colors">
+          <div className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-medium text-[#5c3d48] whitespace-nowrap">
+            <a href="#wedding-offer" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Wedding Offer
             </a>
-            <a href="#discount-walkthrough" className="hover:text-[#c94a6a] transition-colors">
+            <a href="#discount-walkthrough" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Discount Walkthrough
             </a>
-            <a href="#insta-gallery" className="hover:text-[#c94a6a] transition-colors">
+            <a href="#insta-gallery" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Insta Gallery
             </a>
-            <a href="#packages" className="hover:text-[#c94a6a] transition-colors">
+            <a href="#packages" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Packages
             </a>
           </div>
 
-          <div className="hidden md:flex items-center gap-2.5">
+          <div className="hidden md:flex items-center gap-2.5 shrink-0">
             <a
               href={BRAND.instagramUrl}
               target="_blank"
@@ -71,7 +71,7 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
             </a>
             <a
               href="#booking"
-              className="inline-flex items-center gap-2 rounded-full bg-[#c94a6a] hover:bg-[#ad3453] text-white px-5 py-2.5 text-sm font-semibold shadow-sm transition cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#c94a6a] hover:bg-[#ad3453] text-white px-5 py-2.5 text-sm font-semibold shadow-sm transition cursor-pointer whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4" />
               Book Now

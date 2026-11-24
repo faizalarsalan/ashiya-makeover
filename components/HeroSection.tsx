@@ -148,45 +148,6 @@ export function HeroSection({
                 className="w-full h-full object-cover object-top"
               />
 
-              {/* Top Story Progress Pills & Play/Pause Control */}
-              <div className="absolute top-5 inset-x-10 flex items-center gap-1.5 z-10">
-                {HERO_REEL_SLIDES.map((slide, idx) => (
-                  <button
-                    key={slide.id}
-                    type="button"
-                    aria-label={`Play reel: ${slide.label}`}
-                    onClick={() => setActiveIndex(idx)}
-                    className="flex-1 h-1.5 rounded-full bg-white/35 overflow-hidden cursor-pointer backdrop-blur-sm"
-                  >
-                    <span
-                      className={`block h-full rounded-full transition-all duration-300 ${
-                        idx === activeIndex
-                          ? "w-full bg-white"
-                          : idx < activeIndex
-                          ? "w-full bg-white/75"
-                          : "w-0 bg-white"
-                      }`}
-                    />
-                  </button>
-                ))}
-              </div>
-
-              {/* Subtle Top-Left Live Reel Loop Badge + Play/Pause */}
-              <div className="absolute top-10 inset-x-7 flex items-center justify-between z-10">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#2d1b22]/55 backdrop-blur-md text-white px-2.5 py-1 text-[10px] font-semibold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#ff85a6] animate-pulse" />
-                  Looping Reel {activeIndex + 1}/{HERO_REEL_SLIDES.length}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setIsPlaying((p) => !p)}
-                  aria-label={isPlaying ? "Pause slider auto-advance" : "Resume slider auto-advance"}
-                  className="w-7 h-7 rounded-full bg-[#2d1b22]/50 hover:bg-[#2d1b22]/75 backdrop-blur-md text-white flex items-center justify-center transition cursor-pointer"
-                >
-                  {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 ml-0.5" />}
-                </button>
-              </div>
-
               {/* Left / Right Slider Arrows */}
               <button
                 type="button"
@@ -205,25 +166,65 @@ export function HeroSection({
                 <ChevronRight className="w-4 h-4" />
               </button>
 
-              {/* Bottom Gradient & Look Overlay */}
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#2d1b22]/75 via-[#2d1b22]/30 to-transparent" />
-              <div className="absolute bottom-4 inset-x-4 flex items-end justify-between gap-2 text-white z-10">
-                <div>
-                  <p className="text-[11px] uppercase tracking-widest text-[#fde4a8] font-semibold">
-                    {activeSlide.tag}
-                  </p>
-                  <p className="font-display text-xl font-semibold leading-tight">
-                    {activeSlide.title}
-                  </p>
+              {/* Bottom Gradient, Reel Controls & Look Overlay (zero arch-corner clipping) */}
+              <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#2d1b22]/85 via-[#2d1b22]/40 to-transparent" />
+              <div className="absolute bottom-3.5 inset-x-4 space-y-2.5 text-white z-10">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#2d1b22]/60 backdrop-blur-md text-white px-2.5 py-1 text-[10px] font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff85a6] animate-pulse" />
+                    Looping Reel {activeIndex + 1}/{HERO_REEL_SLIDES.length}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setIsPlaying((p) => !p)}
+                    aria-label={isPlaying ? "Pause slider auto-advance" : "Resume slider auto-advance"}
+                    className="w-7 h-7 rounded-full bg-[#2d1b22]/60 hover:bg-[#2d1b22]/85 backdrop-blur-md text-white flex items-center justify-center transition cursor-pointer"
+                  >
+                    {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 ml-0.5" />}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={handleTryActiveLook}
-                  className="shrink-0 inline-flex items-center gap-1 rounded-full bg-white/25 hover:bg-white/35 backdrop-blur-md px-3 py-1.5 text-xs font-semibold transition cursor-pointer whitespace-nowrap"
-                >
-                  <Sparkles className="w-3 h-3 text-[#fde4a8]" />
-                  Try Look <ArrowDownRight className="w-3.5 h-3.5" />
-                </button>
+
+                {/* Story Progress Pills */}
+                <div className="flex items-center gap-1.5">
+                  {HERO_REEL_SLIDES.map((slide, idx) => (
+                    <button
+                      key={slide.id}
+                      type="button"
+                      aria-label={`Play reel: ${slide.label}`}
+                      onClick={() => setActiveIndex(idx)}
+                      className="flex-1 h-1.5 rounded-full bg-white/35 overflow-hidden cursor-pointer backdrop-blur-sm"
+                    >
+                      <span
+                        className={`block h-full rounded-full transition-all duration-300 ${
+                          idx === activeIndex
+                            ? "w-full bg-white"
+                            : idx < activeIndex
+                            ? "w-full bg-white/75"
+                            : "w-0 bg-white"
+                        }`}
+                      />
+                    </button>
+                  ))}
+                </div>
+
+                <div className="flex items-end justify-between gap-2">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-widest text-[#fde4a8] font-semibold">
+                      {activeSlide.tag}
+                    </p>
+                    <p className="font-display text-xl font-semibold leading-tight">
+                      {activeSlide.title}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleTryActiveLook}
+                    className="shrink-0 inline-flex items-center gap-1 rounded-full bg-white/25 hover:bg-white/35 backdrop-blur-md px-3 py-1.5 text-xs font-semibold transition cursor-pointer whitespace-nowrap"
+                  >
+                    <Sparkles className="w-3 h-3 text-[#fde4a8]" />
+                    Try Look <ArrowDownRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               </div>
             </div>
 
