@@ -46,14 +46,14 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-[#5c3d48] whitespace-nowrap">
+            <a href="#before-after" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
+              Before & After
+            </a>
             <a href="#wedding-offer" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Wedding Offer
             </a>
             <a href="#discount-walkthrough" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Walkthrough
-            </a>
-            <a href="#before-after" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
-              Before & After
             </a>
             <a href="#insta-gallery" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Gallery
@@ -101,6 +101,13 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
           <div className="md:hidden border-t border-[#f3d6df] bg-[#fff9f7] px-4 py-4 space-y-3">
             <div className="flex flex-col gap-2 text-sm font-medium text-[#4a2e38]">
               <a
+                href="#before-after"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
+              >
+                🪄 Before & After Slider
+              </a>
+              <a
                 href="#wedding-offer"
                 onClick={() => setMobileOpen(false)}
                 className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
@@ -113,13 +120,6 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
                 className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
               >
                 🎀 Discount Walkthrough
-              </a>
-              <a
-                href="#before-after"
-                onClick={() => setMobileOpen(false)}
-                className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
-              >
-                🪄 Before & After Slider
               </a>
               <a
                 href="#insta-gallery"

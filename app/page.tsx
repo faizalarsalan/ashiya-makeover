@@ -39,13 +39,13 @@ export default function HomePage() {
       <Navbar activeDiscountPercent={calculated.discountPercent} />
       <main className="flex-1">
         <HeroSection onSelectLook={handleSelectLook} />
+        <BeforeAfterSection onSelectLookForOffer={handleSelectLook} />
         <WeddingOfferBuilder
           offerState={offerState}
           setOfferState={setOfferState}
           calculated={calculated}
         />
         <DiscountWalkthrough onApplyScenario={setOfferState} />
-        <BeforeAfterSection onSelectLookForOffer={handleSelectLook} />
         <InstaGallery onSelectLookForOffer={handleSelectLook} />
         <ReviewsSection />
         <PackagesAndBooking

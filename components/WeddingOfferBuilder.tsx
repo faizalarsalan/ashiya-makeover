@@ -38,8 +38,8 @@ type Props = {
   calculated: CalculatedOffer;
 };
 
-// 42px incremental sticky offset keeps each earlier card's header badge + title clearly visible as a stepped lip
-const STICKY_TOPS = [110, 152, 194, 236];
+// 52px incremental sticky offset keeps every earlier card's header badge + title 100% unclipped
+const STICKY_TOPS = [114, 166, 218, 270];
 
 const QUICK_JUMP_STEPS = [
   { id: 0, label: "1 • Season" },
@@ -215,7 +215,7 @@ export function WeddingOfferBuilder({
 
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Uniform-height CSS Sticky Stacking Cards */}
-          <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8 pb-6">
+          <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8 pb-12">
             {/* Card 1 */}
             <div ref={(el) => { anchorRefs.current[0] = el; }} className="h-0 -mb-6 md:-mb-8" />
             <div
@@ -226,7 +226,7 @@ export function WeddingOfferBuilder({
                 transformOrigin: "top center",
                 filter: `brightness(${cardDims[0]})`,
               }}
-              className="md:sticky z-10 md:min-h-[370px] flex flex-col justify-between rounded-3xl bg-white border border-[#efd0da] p-5 sm:p-6 shadow-petal transition-[filter] duration-150 will-change-transform"
+              className="md:sticky z-10 md:min-h-[360px] flex flex-col justify-between rounded-3xl bg-white border border-[#efd0da] pt-3.5 sm:pt-4 pb-5 px-5 sm:px-6 shadow-petal transition-[filter] duration-150 will-change-transform"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
@@ -303,7 +303,7 @@ export function WeddingOfferBuilder({
                 transformOrigin: "top center",
                 filter: `brightness(${cardDims[1]})`,
               }}
-              className="md:sticky z-20 md:min-h-[370px] flex flex-col justify-between rounded-3xl bg-white border border-[#efd0da] p-5 sm:p-6 shadow-petal transition-[filter] duration-150 will-change-transform"
+              className="md:sticky z-20 md:min-h-[360px] flex flex-col justify-between rounded-3xl bg-white border border-[#efd0da] pt-3.5 sm:pt-4 pb-5 px-5 sm:px-6 shadow-petal transition-[filter] duration-150 will-change-transform"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
@@ -391,7 +391,7 @@ export function WeddingOfferBuilder({
                 transformOrigin: "top center",
                 filter: `brightness(${cardDims[2]})`,
               }}
-              className="md:sticky z-30 md:min-h-[370px] flex flex-col justify-between rounded-3xl bg-white border border-[#efd0da] p-5 sm:p-6 shadow-petal transition-[filter] duration-150 will-change-transform"
+              className="md:sticky z-30 md:min-h-[360px] flex flex-col justify-between rounded-3xl bg-white border border-[#efd0da] pt-3.5 sm:pt-4 pb-5 px-5 sm:px-6 shadow-petal transition-[filter] duration-150 will-change-transform"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between gap-2">
@@ -404,7 +404,7 @@ export function WeddingOfferBuilder({
                       3
                     </span>
                     <h3 className="font-display text-xl sm:text-2xl font-semibold text-[#2d1b22]">
-                      Stack Functions & Squad (20%–25% Off!)
+                      Stack Functions & Squad
                     </h3>
                   </button>
                   <Wand2 className="w-5 h-5 text-[#c94a6a] shrink-0" />
@@ -512,7 +512,7 @@ export function WeddingOfferBuilder({
                 transform: `scale(${cardScales[3]})`,
                 transformOrigin: "top center",
               }}
-              className="md:sticky z-40 md:min-h-[390px] flex flex-col justify-between rounded-3xl bg-[#fff3f7] bg-gradient-to-br from-[#fff0f5] via-[#fffafc] to-[#fff6ea] border border-[#e5b3c4] p-5 sm:p-6 shadow-petal will-change-transform"
+              className="md:sticky z-40 md:min-h-[380px] flex flex-col justify-between rounded-3xl bg-[#fff3f7] bg-gradient-to-br from-[#fff0f5] via-[#fffafc] to-[#fff6ea] border border-[#e5b3c4] pt-4 pb-5 px-5 sm:px-6 shadow-petal will-change-transform"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between gap-2">
