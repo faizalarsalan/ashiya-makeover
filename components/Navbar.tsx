@@ -12,19 +12,20 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
   return (
     <header className="sticky top-0 z-40">
       {/* Cute Announcement Strip with 3D Soft Stickers */}
-      <div className="bg-gradient-to-r from-[#b8385a] via-[#c94a6a] to-[#d4607c] text-white px-4 py-2 text-center text-xs sm:text-sm font-medium relative overflow-hidden">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-2 flex-wrap">
-          <Sticker3DBow className="w-6 h-6 shrink-0 -my-1" />
-          <span>
-            Wedding Season Special in Hazaribagh: Save up to <strong>25% OFF</strong> + Free Bridal Perk
+      <div className="bg-gradient-to-r from-[#b8385a] via-[#c94a6a] to-[#d4607c] text-white px-3 sm:px-4 py-1.5 sm:py-2 text-center text-[11px] sm:text-sm font-medium relative overflow-hidden">
+        <div className="max-w-6xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2">
+          <Sticker3DBow className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+          <span className="truncate">
+            <span className="sm:hidden">Shadi Special: Save up to <strong>25% OFF</strong></span>
+            <span className="hidden sm:inline">Wedding Season Special in Hazaribagh: Save up to <strong>25% OFF</strong> + Free Bridal Perk</span>
           </span>
           <a
             href="#wedding-offer"
-            className="inline-flex items-center gap-1 rounded-full bg-white/20 hover:bg-white/30 px-2.5 py-0.5 text-[11px] sm:text-xs font-semibold transition whitespace-nowrap"
+            className="inline-flex items-center gap-1 rounded-full bg-white/20 hover:bg-white/30 px-2.5 py-0.5 text-[11px] sm:text-xs font-semibold transition whitespace-nowrap shrink-0"
           >
-            Your Offer: {activeDiscountPercent}% Off →
+            {activeDiscountPercent}% Off →
           </a>
-          <Sticker3DSparkle className="w-5 h-5 shrink-0 hidden sm:block -my-1" />
+          <Sticker3DSparkle className="w-5 h-5 shrink-0 hidden sm:block" />
         </div>
       </div>
 
