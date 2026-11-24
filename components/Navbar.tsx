@@ -45,15 +45,21 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-medium text-[#5c3d48] whitespace-nowrap">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-[#5c3d48] whitespace-nowrap">
             <a href="#wedding-offer" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Wedding Offer
             </a>
             <a href="#discount-walkthrough" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
-              Discount Walkthrough
+              Walkthrough
+            </a>
+            <a href="#before-after" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
+              Before & After
             </a>
             <a href="#insta-gallery" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
-              Insta Gallery
+              Gallery
+            </a>
+            <a href="#reviews" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
+              Reviews
             </a>
             <a href="#packages" className="hover:text-[#c94a6a] transition-colors whitespace-nowrap">
               Packages
@@ -109,11 +115,25 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
                 🎀 Discount Walkthrough
               </a>
               <a
+                href="#before-after"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
+              >
+                🪄 Before & After Slider
+              </a>
+              <a
                 href="#insta-gallery"
                 onClick={() => setMobileOpen(false)}
                 className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
               >
                 📸 Insta Image Gallery
+              </a>
+              <a
+                href="#reviews"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-[#fff0f4]"
+              >
+                💖 Bride Reviews
               </a>
               <a
                 href="#packages"

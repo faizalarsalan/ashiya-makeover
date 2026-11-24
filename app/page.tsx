@@ -5,7 +5,9 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { WeddingOfferBuilder } from "@/components/WeddingOfferBuilder";
 import { DiscountWalkthrough } from "@/components/DiscountWalkthrough";
+import { BeforeAfterSection } from "@/components/BeforeAfterSection";
 import { InstaGallery } from "@/components/InstaGallery";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { PackagesAndBooking } from "@/components/PackagesAndBooking";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
@@ -43,7 +45,9 @@ export default function HomePage() {
           calculated={calculated}
         />
         <DiscountWalkthrough onApplyScenario={setOfferState} />
+        <BeforeAfterSection onSelectLookForOffer={handleSelectLook} />
         <InstaGallery onSelectLookForOffer={handleSelectLook} />
+        <ReviewsSection />
         <PackagesAndBooking
           selectedLookId={offerState.lookId}
           onSelectPackage={handleSelectLook}

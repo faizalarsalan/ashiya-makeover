@@ -415,3 +415,108 @@ export const HERO_REEL_SLIDES: HeroReelSlide[] = [
     instagramUrl: "https://www.instagram.com/makeupby_ashiyanaaz/reel/DdJk34IzYf0/",
   },
 ];
+
+export type BeforeAfterTransformation = {
+  id: string;
+  title: string;
+  occasion: string;
+  beforeImage: string;
+  afterImage: string;
+  duration: string;
+  skinFocus: string;
+  techniques: string[];
+  recommendedLookId: string;
+};
+
+export const BEFORE_AFTER_ITEMS: BeforeAfterTransformation[] = [
+  {
+    id: "pastel-blush-transform",
+    title: "Natural Bare Skin → Pastel Blush Kundan Glow",
+    occasion: "Signature HD Dulhan",
+    beforeImage: "/images/before-blush-bride.jpg",
+    afterImage: "/images/hero-bride.jpg",
+    duration: "3.5 hrs session",
+    skinFocus: "Under-eye color neutralizing + dewy glass-skin barrier",
+    techniques: [
+      "Peach corrector for natural under-eye warmth — zero grey cast",
+      "Breathable HD foundation blended to true neck & chest undertone",
+      "Soft winged liner, feathery brows & berry-rose matte lip",
+      "Wispy curl framing + kundan matha patti & dupatta setting",
+    ],
+    recommendedLookId: "signature-hd-bridal",
+  },
+  {
+    id: "royal-crimson-transform",
+    title: "Un-Retouched Prep → Royal Crimson Dulhan Glam",
+    occasion: "Royal Airbrush Bridal",
+    beforeImage: "/images/before-royal-bride.jpg",
+    afterImage: "/images/look-bridal-royal.jpg",
+    duration: "4 hrs session",
+    skinFocus: "18-hr sweat & tear-proof airbrush finish",
+    techniques: [
+      "Micro-mist hydration + oil-balanced primer for Hazaribagh humidity",
+      "Bronze-rose cut-crease eyes + velvet crimson long-wear pout",
+      "3D lashes blended naturally into the lash line",
+      "Crisp matha patti, nath & floral bun anchoring",
+    ],
+    recommendedLookId: "royal-airbrush-bridal",
+  },
+];
+
+export type ClientReview = {
+  id: string;
+  name: string;
+  initials: string;
+  area: string;
+  category: "bridal" | "party" | "haldi";
+  lookBooked: string;
+  quote: string;
+  highlightTag: string;
+};
+
+export const CLIENT_REVIEWS: ClientReview[] = [
+  {
+    id: "rev-sana",
+    name: "Sana Parween",
+    initials: "SP",
+    area: "Canary Hill, Hazaribagh",
+    category: "bridal",
+    lookBooked: "Royal Airbrush Bridal",
+    highlightTag: "16-Hr Sweat-Proof",
+    quote:
+      "I wanted zero cakey texture and natural-looking skin for my Nikah photos — Ashiya di matched my exact undertone and my base stayed luminous from 4 PM till 2 AM.",
+  },
+  {
+    id: "rev-priya",
+    name: "Priya Kumari",
+    initials: "PK",
+    area: "Korrah, Hazaribagh",
+    category: "bridal",
+    lookBooked: "Signature HD Dulhan + Haldi",
+    highlightTag: "Saved ₹6,200 Bundle",
+    quote:
+      "Booked the Wedding Season combo for my Haldi and Shaadi plus my two sisters! Her double-dupatta pinning didn't budge once during pheras.",
+  },
+  {
+    id: "rev-anamika",
+    name: "Anamika Verma",
+    initials: "AV",
+    area: "Matwari, Hazaribagh",
+    category: "party",
+    lookBooked: "Sister Party Glam (3 Squad)",
+    highlightTag: "25% Squad Discount",
+    quote:
+      "Me, my mom, and cousin got ready together at Ashiya Makeover. Super hygienic brushes, warm vibes, and everyone at the sangeet asked who did our soft-glam eyes.",
+  },
+  {
+    id: "rev-farheen",
+    name: "Farheen Naaz",
+    initials: "FN",
+    area: "Dipugarha, Hazaribagh",
+    category: "haldi",
+    lookBooked: "Haldi Floral Dew + Hair",
+    highlightTag: "Fresh Mogra Braid",
+    quote:
+      "The floral mogra hairstyling and fresh peachy dewy look were so lightweight! She arrived early at our venue and made me feel so calm before the ceremony.",
+  },
+];
