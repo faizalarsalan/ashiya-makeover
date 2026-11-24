@@ -572,7 +572,7 @@ export function WeddingOfferBuilder({
                   className="inline-flex items-center gap-1.5 rounded-full bg-[#c94a6a] hover:bg-[#ad3453] text-white px-4 py-2 text-xs font-semibold transition"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
-                  Lock Now on WhatsApp
+                  Book Now on WhatsApp
                 </a>
               </div>
             </div>
@@ -734,7 +734,7 @@ export function WeddingOfferBuilder({
                   className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#c94a6a] to-[#b03253] hover:from-[#b03253] hover:to-[#942644] text-white py-3 px-6 text-sm sm:text-base font-semibold shadow-petal transition transform hover:-translate-y-0.5"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Lock This {calculated.discountPercent}% Offer on WhatsApp
+                  Book Now ({calculated.discountPercent}% Off) on WhatsApp
                 </a>
 
                 <a

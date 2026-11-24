@@ -27,7 +27,7 @@ export function MobileStickyBar({ calculated }: { calculated: CalculatedOffer })
           className="inline-flex items-center gap-1.5 rounded-full bg-[#c94a6a] hover:bg-[#ad3453] text-white px-4 py-2.5 text-xs font-semibold shadow-sm shrink-0"
         >
           <MessageCircle className="w-3.5 h-3.5" />
-          Lock Offer
+          Book Now
         </a>
       </div>
     </div>

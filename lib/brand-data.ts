@@ -343,10 +343,10 @@ export const WALKTHROUGH_STEPS: WalkthroughStep[] = [
   },
   {
     step: 4,
-    title: "Lock Your Date in 1 Click on WhatsApp",
+    title: "Book Your Date in 1 Click on WhatsApp",
     tag: "Zero Forms Hassle",
     summary:
-      "Hit 'Lock This Offer on WhatsApp' — your exact discounted summary, savings breakdown, and promo code pre-fill cleanly to Ashiya's WhatsApp (+91 92631 84142).",
+      "Hit 'Book Now on WhatsApp' — your exact discounted summary, savings breakdown, and promo code pre-fill cleanly to Ashiya's WhatsApp (+91 92631 84142).",
     exampleMath: "Instant Hazaribagh studio or venue slot confirmation directly with Ashiya",
     proTip: "Only a small booking advance holds your muhurat/nikah date — remaining balance on your wedding day!",
   },
