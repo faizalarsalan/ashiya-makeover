@@ -73,7 +73,7 @@ export function WeddingOfferBuilder({
           observer.disconnect();
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.01, rootMargin: "120px 0px" }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -131,7 +131,7 @@ export function WeddingOfferBuilder({
     const translateY = offset * 16;
     const scale = 1 - offset * 0.032;
     const opacity = offset === 0 ? 1 : offset === 1 ? 0.92 : offset === 2 ? 0.8 : 0.68;
-    const zIndex = 40 - offset * 10;
+    const zIndex = 30 - offset * 8;
 
     return {
       transform: hasEntered

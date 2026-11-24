@@ -167,11 +167,8 @@ export function HeroSection({
         <div className="hidden lg:block absolute bottom-24 left-6 animate-float-slow opacity-85">
           <Sticker3DCompact className="w-12 h-12 -rotate-12" />
         </div>
-        <div className="sm:hidden absolute top-16 right-3 animate-float-gentle opacity-90">
-          <Sticker3DBow className="w-10 h-10 rotate-12" />
-        </div>
-        <div className="sm:hidden absolute top-64 left-2 animate-float-slow opacity-80">
-          <Sticker3DBrush className="w-9 h-9 -rotate-12" />
+        <div className="sm:hidden absolute top-3 right-3 animate-float-gentle opacity-95">
+          <Sticker3DBow className="w-8 h-8 rotate-12" />
         </div>
       </div>
 

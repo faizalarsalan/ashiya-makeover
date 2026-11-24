@@ -10,7 +10,7 @@ export function Navbar({ activeDiscountPercent }: { activeDiscountPercent: numbe
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40">
+    <header className="sticky top-0 z-50">
       {/* Cute Announcement Strip with 3D Soft Stickers */}
       <div className="bg-gradient-to-r from-[#b8385a] via-[#c94a6a] to-[#d4607c] text-white px-3 sm:px-4 py-1.5 sm:py-2 text-center text-[11px] sm:text-sm font-medium relative overflow-hidden">
         <div className="max-w-6xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2">

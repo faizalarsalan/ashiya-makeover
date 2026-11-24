@@ -223,7 +223,7 @@ export function InstaGallery({
       {/* Interactive Look Lightbox Modal */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-50 bg-[#2d1b22]/65 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[60] bg-[#2d1b22]/65 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setSelectedItem(null)}
         >
           <div
