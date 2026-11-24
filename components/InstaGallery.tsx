@@ -56,7 +56,7 @@ export function InstaGallery({
   };
 
   return (
-    <section id="insta-gallery" className="py-16 sm:py-24 bg-[#fff4f7] border-y border-[#f4d7e0]">
+    <section id="insta-gallery" className="scroll-mt-28 py-16 sm:py-24 bg-[#fff4f7] border-y border-[#f4d7e0]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
         {/* Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

@@ -6,7 +6,7 @@ import { type CalculatedOffer, formatINR } from "@/lib/offer-calculator";
 
 export function MobileStickyBar({ calculated }: { calculated: CalculatedOffer }) {
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-[#fff9f7]/95 backdrop-blur-md border-t border-[#f0cbd7] px-4 py-3 shadow-lg">
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-[#fff9f7]/95 backdrop-blur-md border-t border-[#f0cbd7] px-4 py-3 shadow-lg">
       <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-wider text-[#c94a6a]">

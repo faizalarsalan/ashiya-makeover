@@ -78,7 +78,7 @@ export function PackagesAndBooking({
   return (
     <>
       {/* Signature Packages & Trust Pillars */}
-      <section id="packages" className="py-16 sm:py-24 bg-[#fff9f7]">
+      <section id="packages" className="scroll-mt-28 py-16 sm:py-24 bg-[#fff9f7]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-14">
           <div className="max-w-2xl mx-auto text-center space-y-3">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#fff0f4] border border-[#f2cbd7] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#b53759]">
@@ -229,7 +229,7 @@ export function PackagesAndBooking({
       </section>
 
       {/* Final High-Converting WhatsApp Booking Section */}
-      <section id="booking" className="py-16 sm:py-24 bg-[#fff0f4] border-t border-[#f3d4de]">
+      <section id="booking" className="scroll-mt-28 py-16 sm:py-24 bg-[#fff0f4] border-t border-[#f3d4de]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="rounded-[32px] bg-white border border-[#efcad6] shadow-petal overflow-hidden grid lg:grid-cols-12">
             {/* Left Info & Direct Contact */}

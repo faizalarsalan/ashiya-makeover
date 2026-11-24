@@ -16,7 +16,7 @@ export function ReviewsSection() {
       : CLIENT_REVIEWS.filter((r) => r.category === filter);
 
   return (
-    <section id="reviews" className="py-16 sm:py-24 bg-[#fff4f7] border-t border-[#f4d7e0]">
+    <section id="reviews" className="scroll-mt-28 py-16 sm:py-24 bg-[#fff4f7] border-t border-[#f4d7e0]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
         {/* Header + Rating Summary Pill */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">

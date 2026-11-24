@@ -79,7 +79,7 @@ export function DiscountWalkthrough({
   };
 
   return (
-    <section id="discount-walkthrough" className="py-16 sm:py-24 bg-[#fff9f7]">
+    <section id="discount-walkthrough" className="scroll-mt-28 py-16 sm:py-24 bg-[#fff9f7]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#fff0f4] border border-[#f2cbd7] pl-2.5 pr-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#b53759]">
